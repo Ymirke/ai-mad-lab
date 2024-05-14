@@ -9,6 +9,8 @@ import {
   IconShare3,
 } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
+import { useMediaQuery } from '@mantine/hooks';
+import { NextFont } from 'next/dist/compiled/@next/font';
 
 const links = [
   {
@@ -33,17 +35,33 @@ const links = [
   },
 ];
 
-export function Links() {
+export function Links({ font }: { font: NextFont }) {
   const router = useRouter();
+  const isMobile = useMediaQuery('(max-width: 1150px)');
 
   return (
-    <Flex gap={30} style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem' }}>
+    <Flex
+      justify={'flex-start'}
+      align={'start'}
+      gap={isMobile ? 5 : 30}
+      mb={isMobile ? 20 : 0}
+      direction={isMobile ? 'column' : 'row'}
+      style={{
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        padding: '1rem',
+      }}
+    >
       {links.map((l) => (
         <Button
+          key={l.label}
           leftSection={l.icon}
           rightSection={<IconShare3 size={18} />}
           c="black"
           bg="white"
+          style={{ ...font.style }}
           variant="subtle"
           onClick={() => {
             router.push(l.href);
