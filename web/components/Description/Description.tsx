@@ -18,7 +18,7 @@ export function Description({ font }: { font: NextFont }) {
         fw={500}
       >
         A community of AI founders, engineers and researchers. Join our community and attend our
-        monthly meetups at Start-up Lab in Oslo, Norway.
+        monthly meetups at Startuplab in Oslo, Norway.
       </Text>
     </Box>
   );
