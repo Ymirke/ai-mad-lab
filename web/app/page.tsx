@@ -1,5 +1,3 @@
-import { Welcome } from '../components/Welcome/Welcome';
-import { ColorSchemeToggle } from '../components/ColorSchemeToggle/ColorSchemeToggle';
 import { Header } from '@/components/Header/Header';
 import { Box, Container } from '@mantine/core';
 import { Description } from '@/components/Description/Description';
@@ -15,7 +13,7 @@ const gothamBook = localFont({ src: '../fonts/Gotham-Book.otf' });
 export default function HomePage() {
   return (
     <>
-      <Box p={10}>
+      <Box p={30}>
         <Header font={gothamBlack} />
         <Description font={gothamMedium} />
         <Sphere />

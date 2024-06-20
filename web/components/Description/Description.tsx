@@ -14,11 +14,11 @@ export function Description({ font }: { font: NextFont }) {
         style={{ lineHeight: 1.2, fontSize: isMobile ? '1.3rem' : '2rem', ...font.style }}
         // size={'xl'}
         maw={600}
-        c={theme === 'light' ? '#000' : '#fff'}
+        c={'white'}
         fw={500}
       >
         A community of AI founders, engineers and researchers. Join our community and attend our
-        monthly meetups at Start-up Lab in Oslo, Norway.
+        monthly meetups at Startup Lab in Oslo, Norway.
       </Text>
     </Box>
   );

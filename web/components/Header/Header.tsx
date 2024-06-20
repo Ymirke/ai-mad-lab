@@ -15,7 +15,7 @@ export function Header({ font }: { font: NextFont }) {
 
   return (
     <Flex justify={'space-between'}>
-      <Title c={x === 'light' ? 'black' : 'white'} style={{ ...font.style }}>
+      <Title c={'white'} style={{ ...font.style }}>
         AI Mad Lab
       </Title>
       <ActionIcon

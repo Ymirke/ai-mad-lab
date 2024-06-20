@@ -4,13 +4,15 @@ import { useMediaQuery } from '@mantine/hooks';
 import React, { useEffect, useState } from 'react';
 
 export function Sphere() {
-  const [img, setImg] = useState('');
+  const [videoSrc, setVideo] = useState('');
   const isMobile = useMediaQuery('(max-width: 768px)');
 
   function setRandomSphere() {
-    const randomNum = Math.floor(Math.random() * (20 - 1 + 1)) + 1;
-    const url = `/sphere-${randomNum}.png`;
-    setImg(url);
+    const max = 6;
+
+    const randomNum = Math.floor(Math.random() * (max - 1 + 1)) + 1;
+    const url = `/sphere-${randomNum}.mp4`;
+    setVideo(url);
   }
 
   useEffect(() => {
@@ -19,6 +21,7 @@ export function Sphere() {
 
   return (
     <Box
+      bg="black"
       style={{
         position: 'absolute',
         top: 0,
@@ -31,18 +34,23 @@ export function Sphere() {
         zIndex: -1,
       }}
     >
-      <img
+      <video
+        loop
+        muted
+        autoPlay
         style={{
           cursor: 'pointer',
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: '80vw',
+          maxWidth: '70vw',
           height: 'auto',
+          border: '100px solid black',
+          borderRadius: '1000px',
         }}
         onClick={() => {
           setRandomSphere();
         }}
-        src={img}
+        src={videoSrc}
       />
     </Box>
   );

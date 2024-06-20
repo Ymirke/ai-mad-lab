@@ -1,18 +1,19 @@
 import '@mantine/core/styles.css';
 import React from 'react';
-import { MantineProvider, ColorSchemeScript } from '@mantine/core';
+import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
 
 export const metadata = {
   title: 'AI MAD LAB',
-  description: 'AI founders, engineers and researchers. Join our community and attend our monthly meetups at Start-up Lab in Oslo, Norway.',
+  description:
+    'AI founders, engineers and researchers. Join our community and attend our monthly meetups at StartupLab in Oslo, Norway.',
 };
 
 export default function RootLayout({ children }: { children: any }) {
   return (
     <html lang="en">
       <head>
-        <ColorSchemeScript />
+        <ColorSchemeScript defaultColorScheme="dark" forceColorScheme="dark" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"

@@ -59,8 +59,8 @@ export function Links({ font }: { font: NextFont }) {
           key={l.label}
           leftSection={l.icon}
           rightSection={<IconShare3 size={18} />}
-          c="black"
-          bg="white"
+          c="white"
+          bg="black"
           style={{ ...font.style }}
           variant="subtle"
           onClick={() => {
