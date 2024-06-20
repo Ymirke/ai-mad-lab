@@ -15,6 +15,7 @@ export default function RootLayout({ children }: { children: any }) {
       <head>
         <ColorSchemeScript defaultColorScheme="dark" forceColorScheme="dark" />
         <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="icon" href="Fav_64.gif" type="image/gif" />
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"

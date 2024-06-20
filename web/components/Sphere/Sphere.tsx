@@ -38,6 +38,7 @@ export function Sphere() {
         loop
         muted
         autoPlay
+        playsInline
         style={{
           cursor: 'pointer',
           marginLeft: 'auto',
