@@ -1,0 +1,5 @@
+.video {
+  @media (max-width: var(--mantine-breakpoint-xs)) {
+    border: 50px solid red;
+  }
+}

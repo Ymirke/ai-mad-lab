@@ -1,11 +1,11 @@
 'use client';
-import { Box, Container } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
+import { Box } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
+import classes from './Sphere.module.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export function Sphere() {
   const [videoSrc, setVideo] = useState('');
-  const isMobile = useMediaQuery('(max-width: 768px)');
 
   function setRandomSphere() {
     const max = 6;
@@ -34,25 +34,37 @@ export function Sphere() {
         zIndex: -1,
       }}
     >
-      <video
-        loop
-        muted
-        autoPlay
-        playsInline
-        style={{
-          cursor: 'pointer',
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: '70vw',
-          height: 'auto',
-          border: '100px solid black',
-          borderRadius: '1000px',
-        }}
-        onClick={() => {
-          setRandomSphere();
-        }}
-        src={videoSrc}
-      />
+      <AnimatePresence>
+        <motion.video
+          key={videoSrc}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            opacity: { duration: .75, ease: 'easeInOut' },
+            exit: { duration: 0 }, // Instant exit
+          }}
+          className={classes.video}
+          loop
+          muted
+          autoPlay
+          playsInline
+          style={{
+            cursor: 'pointer',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            maxWidth: '70vw',
+            width: 'auto',
+            outline: '100px solid black',
+            borderRadius: '1000px',
+            position: 'absolute', // Ensures overlapping videos
+          }}
+          onClick={() => {
+            setRandomSphere();
+          }}
+          src={videoSrc}
+        />
+      </AnimatePresence>
     </Box>
   );
 }
