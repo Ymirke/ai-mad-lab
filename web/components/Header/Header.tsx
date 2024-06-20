@@ -15,9 +15,10 @@ export function Header({ font }: { font: NextFont }) {
 
   return (
     <Flex justify={'space-between'}>
-      <Title c={'white'} style={{ ...font.style }}>
+      <img height={'36px'} src="/logo.svg" alt="AI MAD LAB" />
+      {/* <Title c={'white'} style={{ ...font.style }}>
         AI Mad Lab
-      </Title>
+      </Title> */}
       <ActionIcon
         onClick={() => {
           if (x === 'light') {

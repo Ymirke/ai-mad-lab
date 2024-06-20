@@ -58,7 +58,7 @@ export function Links({ font }: { font: NextFont }) {
         <Button
           key={l.label}
           leftSection={l.icon}
-          rightSection={<IconShare3 size={18} />}
+          rightSection={<img src="/arrow.svg"></img>}
           c="white"
           bg="black"
           style={{ ...font.style }}
