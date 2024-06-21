@@ -10,7 +10,7 @@ export function Sphere({ initialGlobeCount, font }: { initialGlobeCount: number;
   const [count, setCount] = useState(initialGlobeCount);
 
   async function increaseGlobeCount() {
-    const res = await fetch('/api/click-count/add', {
+    const res = await fetch('https://aimadlab.com/api/click-count/add', {
       method: 'GET',
     });
 
