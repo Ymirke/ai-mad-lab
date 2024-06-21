@@ -1,11 +1,23 @@
 'use client';
-import { Box } from '@mantine/core';
+import { Box, Text } from '@mantine/core';
 import React, { useEffect, useState } from 'react';
 import classes from './Sphere.module.css';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NextFont } from 'next/dist/compiled/@next/font';
 
-export function Sphere() {
+export function Sphere({ initialGlobeCount, font }: { initialGlobeCount: number; font: NextFont }) {
   const [videoSrc, setVideo] = useState('');
+  const [count, setCount] = useState(initialGlobeCount);
+
+  async function increaseGlobeCount() {
+    const res = await fetch('/api/click-count/add', {
+      method: 'GET',
+    });
+
+    const { data } = await res.json();
+
+    setCount(data);
+  }
 
   function setRandomSphere() {
     const max = 6;
@@ -34,6 +46,19 @@ export function Sphere() {
         zIndex: -1,
       }}
     >
+      <Text
+        c="white"
+        style={{
+          ...font.style,
+          position: 'absolute',
+          left: 20,
+          zIndex: 9999,
+          writingMode: 'vertical-lr',
+          transform: 'rotate(180deg)',
+        }}
+      >
+        {count} Clicks
+      </Text>
       <AnimatePresence>
         <motion.video
           key={videoSrc}
@@ -41,7 +66,7 @@ export function Sphere() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            opacity: { duration: .75, ease: 'easeInOut' },
+            opacity: { duration: 0.75, ease: 'easeInOut' },
             exit: { duration: 0 }, // Instant exit
           }}
           className={classes.video}
@@ -49,18 +74,9 @@ export function Sphere() {
           muted
           autoPlay
           playsInline
-          style={{
-            cursor: 'pointer',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            maxWidth: '70vw',
-            width: 'auto',
-            outline: '100px solid black',
-            borderRadius: '1000px',
-            position: 'absolute', // Ensures overlapping videos
-          }}
           onClick={() => {
             setRandomSphere();
+            increaseGlobeCount();
           }}
           src={videoSrc}
         />
