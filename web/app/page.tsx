@@ -13,7 +13,7 @@ const gothamLight = localFont({ src: '../fonts/Gotham-Light.otf' });
 
 // Getting initial globe count
 async function getGlobeClickCount(): Promise<number> {
-  const res = await fetch('/api/click-count/get', {
+  const res = await fetch('https://aimadlab.com/api/click-count/get', {
     method: 'GET',
   });
 
