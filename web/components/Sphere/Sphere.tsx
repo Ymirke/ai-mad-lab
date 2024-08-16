@@ -10,13 +10,17 @@ export function Sphere({ initialGlobeCount, font }: { initialGlobeCount: number;
   const [count, setCount] = useState(initialGlobeCount);
 
   async function increaseGlobeCount() {
-    const res = await fetch('https://www.aimadlab.com/api/click-count/add', {
-      method: 'GET',
-    });
+    try {
+      const res = await fetch('https://www.aimadlab.com/api/click-count/add', {
+        method: 'GET',
+      });
 
-    const { data } = await res.json();
+      const { data } = await res.json();
 
-    setCount(data);
+      setCount(data);
+    } catch (err) {
+      console.error('increaseGlobeCountError', err);
+    }
   }
 
   function setRandomSphere() {
