@@ -11,7 +11,7 @@ export function Header({ font }: { font: NextFont }) {
 
   return (
     <Flex justify={'space-between'}>
-      <img height={isMobile ? '22px' : '36px'} src="/logo.svg" alt="AI MAD LAB" />
+      <img height={isMobile ? '22px' : '30px'} src="/logo.svg" alt="AI MAD LAB" />
       {/* <Title c={'white'} style={{ ...font.style }}>
         AI Mad Lab
       </Title> */}

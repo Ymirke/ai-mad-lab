@@ -41,7 +41,7 @@ const elements: React.ReactNode[] = [
 ];
 
 export function SummitBanner2({ ...props }: ContainerProps) {
-  const elementWidth = 910;
+  const elementWidth = 842;
   const duration = 10; // Adjust the duration as needed
 
   const motionVariants = {
