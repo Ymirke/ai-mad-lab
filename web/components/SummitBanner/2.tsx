@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Box, Text, ContainerProps, Flex } from '@mantine/core';
-import { IconArrowUpRight, IconCircleFilled } from '@tabler/icons-react';
+import { IconArrowUpRight, IconCircleFilled, IconLetterM } from '@tabler/icons-react';
 
 const elements: React.ReactNode[] = [
   <IconCircleFilled />,
@@ -35,24 +35,17 @@ const elements: React.ReactNode[] = [
 ];
 
 export function SummitBanner2({ ...props }: ContainerProps) {
-  const [totalWidth, setTotalWidth] = useState(0);
-
-  useEffect(() => {
-    setTotalWidth(window.visualViewport?.width || 0);
-  }, []);
-
   const elementWidth = 910;
-  const containerWidth = totalWidth;
-  const duration = 20; // Adjust the duration as needed
+  const duration = 10; // Adjust the duration as needed
 
   const motionVariants = {
     animate: {
-      x: [-elementWidth, -elementWidth * 2],
+      x: [0, -elementWidth],
       transition: {
         x: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: (duration * elementWidth) / containerWidth,
+          duration: duration,
           ease: 'linear',
         },
       },
@@ -86,7 +79,7 @@ export function SummitBanner2({ ...props }: ContainerProps) {
         }}
       >
         <Flex gap={10}>
-          {[...elements, ...elements].map((Element, index) => (
+          {[...elements, ...elements, ...elements].map((Element, index) => (
             <Flex style={{ color: '#000' }} key={index}>
               {Element}
             </Flex>
