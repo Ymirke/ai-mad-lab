@@ -2,7 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Box, Text, ContainerProps, Flex } from '@mantine/core';
-import { IconArrowUpRight, IconCircleFilled, IconLetterM } from '@tabler/icons-react';
+import { IconArrowUpRight, IconCircleFilled as IconCircle } from '@tabler/icons-react';
+
+const IconCircleFilled = () => (
+  <Flex justify={'center'} align={'center'}>
+    <IconCircle size={14} />
+  </Flex>
+);
 
 const elements: React.ReactNode[] = [
   <IconCircleFilled />,
@@ -63,7 +69,7 @@ export function SummitBanner2({ ...props }: ContainerProps) {
         bottom: 0,
         right: 0,
         left: 0,
-        height: '80px',
+        height: '3.25rem',
         backgroundImage: 'url(/summit-banner.png)',
         overflow: 'hidden',
       }}
@@ -74,8 +80,8 @@ export function SummitBanner2({ ...props }: ContainerProps) {
         style={{
           display: 'inline-block',
           whiteSpace: 'nowrap',
-          marginTop: '24px',
-          marginBottom: '24px',
+          marginTop: '16px',
+          marginBottom: '16px',
         }}
       >
         <Flex gap={10}>

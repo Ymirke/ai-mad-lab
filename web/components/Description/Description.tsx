@@ -11,8 +11,7 @@ export function Description({ font }: { font: NextFont }) {
   return (
     <Box mt={50} style={{ width: '500px', maxWidth: '90vw' }}>
       <Text
-        style={{ lineHeight: 1.2, fontSize: isTablet ? '18px' : '22px', ...font.style }}
-        // size={'xl'}
+        style={{ lineHeight: 1.2, fontSize: isTablet ? '16px' : '22px', ...font.style }}
         maw={600}
         c={'white'}
         fw={500}
