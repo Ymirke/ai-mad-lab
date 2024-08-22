@@ -4,16 +4,17 @@ import { Description } from '@/components/Description/Description';
 import { Sphere } from '@/components/Sphere/Sphere';
 import { Links } from '@/components/Links/Links';
 import localFont from 'next/font/local';
+import { SummitBanner } from '@/components/SummitBanner/SummitBanner';
+import { SummitBanner2 } from '@/components/SummitBanner/2';
 
 // Should make fetch request run every time someone visits the page
-export const dynamic = "force-dynamic";
+export const dynamic = 'force-dynamic';
 
 const gothamBlack = localFont({ src: '../fonts/Gotham-Black.otf' });
 const gothamMedium = localFont({ src: '../fonts/Gotham-Medium.otf' });
 const gothamBook = localFont({ src: '../fonts/Gotham-Book.otf' });
 const gothamLight = localFont({ src: '../fonts/Gotham-Light.otf' });
 // const gothamThin = localFont({ src: '../fonts/Gotham-Thin.otf' });
-
 
 // Getting initial globe count
 async function getGlobeClickCount(): Promise<number> {
@@ -32,11 +33,12 @@ export default async function HomePage() {
 
   return (
     <>
-      <Box p={30}>
+      <Box pt={30} pr={30} pl={30} pb={0}>
         <Header font={gothamBlack} />
         <Description font={gothamMedium} />
         <Sphere font={gothamBook} initialGlobeCount={initialGlobeCount} />
         <Links font={gothamLight} />
+        <SummitBanner2 />
       </Box>
     </>
   );

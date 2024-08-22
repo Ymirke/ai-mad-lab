@@ -9,7 +9,7 @@
   max-height: 70vh;
   max-width: 70vw;
   width: auto;
-  outline: 100px solid black;
+  /* outline: 100px solid black; */
   borderradius: 1000px;
   /* No overlap when swapping spheres */
   position: absolute;

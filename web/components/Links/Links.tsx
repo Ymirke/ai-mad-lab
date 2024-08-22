@@ -43,12 +43,12 @@ export function Links({ font }: { font: NextFont }) {
     <Flex
       justify={'flex-start'}
       align={'start'}
-      gap={isMobile ? 5 : 30}
+      gap={isMobile ? 10 : 10}
       mb={isMobile ? 20 : 0}
-      direction={isMobile ? 'column' : 'row'}
+      direction={'column'}
       style={{
         position: 'absolute',
-        bottom: 0,
+        bottom: 80,
         left: 0,
         right: 0,
         padding: '1rem',

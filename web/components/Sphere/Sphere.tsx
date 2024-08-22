@@ -17,7 +17,9 @@ export function Sphere({ initialGlobeCount, font }: { initialGlobeCount: number;
 
       const { data } = await res.json();
 
-      setCount(data);
+      if (typeof data === 'number') {
+        setCount(data);
+      }
     } catch (err) {
       console.error('increaseGlobeCountError', err);
     }
