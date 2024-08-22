@@ -43,8 +43,7 @@ export function Links({ font }: { font: NextFont }) {
     <Flex
       justify={'flex-start'}
       align={'start'}
-      gap={isMobile ? '1rem' : '1rem'}
-      mb={isMobile ? 20 : 0}
+      gap={isMobile ? '.25rem' : '.25rem'}
       direction={'column'}
       style={{
         position: 'absolute',
@@ -62,7 +61,7 @@ export function Links({ font }: { font: NextFont }) {
           c="white"
           className={classes.button}
           bg="transparent"
-          style={{ ...font.style }}
+          style={{ ...font.style, fontSize: '0.875rem' }}
           variant="subtle"
           onClick={() => {
             router.push(l.href);
