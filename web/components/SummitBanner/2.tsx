@@ -1,8 +1,9 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Box, Text, ContainerProps, Flex } from '@mantine/core';
 import { IconArrowUpRight, IconCircleFilled as IconCircle } from '@tabler/icons-react';
+import { useRouter } from 'next/navigation';
 
 const IconCircleFilled = () => (
   <Flex justify={'center'} align={'center'}>
@@ -41,6 +42,7 @@ const elements: React.ReactNode[] = [
 ];
 
 export function SummitBanner2({ ...props }: ContainerProps) {
+  const router = useRouter();
   const elementWidth = 852;
   const duration = 10; // Adjust the duration as needed
 
@@ -61,7 +63,7 @@ export function SummitBanner2({ ...props }: ContainerProps) {
   return (
     <Box
       {...props}
-      onClick={() => window.open('https://lu.ma/wxkp0tcf')}
+      onClick={() => router.push('/summit-2024')}
       style={{
         cursor: 'pointer',
         width: '100%',

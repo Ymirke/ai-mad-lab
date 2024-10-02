@@ -5,10 +5,12 @@ import styles from './SummitBanner.module.css';
 import { Flex, Text } from '@mantine/core';
 import { useRouter } from 'next/navigation';
 
+// https://lu.ma/wxkp0tcf
+
 export function SummitBanner() {
   const router = useRouter();
   return (
-    <div onClick={() => router.push('https://lu.ma/wxkp0tcf')} className={styles.bannerContainer}>
+    <div onClick={() => router.push('/2024')} className={styles.bannerContainer}>
       <div className={styles.bannerContainer}>
         <img className={styles.bannerImage} src="/summit-banner.png" alt="summit-banner" />
         <div className={styles.scrollingText}>

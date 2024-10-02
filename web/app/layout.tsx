@@ -2,6 +2,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { ColorSchemeScript, MantineProvider } from '@mantine/core';
 import { theme } from '../theme';
+import '@/styles/.global.css';
 
 export const metadata = {
   title: 'AI MAD LAB',
