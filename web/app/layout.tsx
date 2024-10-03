@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: any }) {
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
         />
-        <meta property="og:image" content="/2024/opengraph-image.png" />
+        <meta property="og:image" content="https://aimadlab.com/2024/opengraph-image.png" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="627" />
