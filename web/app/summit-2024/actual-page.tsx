@@ -4,8 +4,8 @@ import { Box, Container, Title, Text, Center, SimpleGrid } from '@mantine/core';
 import { Speaker, SpeakerCard } from '@/components/SpeakerCard/SpeakerCard';
 import { Program2024 } from '@/components/Program/2024-program';
 import { Partners2024 } from '@/components/Partners/partners-2024';
-import Head from 'next/head';
 import localFont from 'next/font/local';
+import Head from 'next/head';
 
 const speakers: Speaker[] = [
   {
@@ -72,6 +72,12 @@ const gothamBold = localFont({ src: '../../fonts/Gotham-Bold.otf' });
 export default function Ticket() {
   return (
     <>
+      <Head>
+        <meta property="og:image" content="/2024/opengraph-image.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="512" />
+        <meta property="og:image:height" content="512" />
+      </Head>
       <Container pt={50}>
         <Title ta="center" order={1} style={{ color: 'white', ...gothamBold.style }}>
           AI MAD LAB Summit 2024

@@ -1,5 +1,5 @@
 import Ticket from './actual-page';
-import ogImage from '../../public/2024/opengraph-image.png';
+import ogImage from './opengraph-image.png';
 
 export const metadata = {
   metadataBase: new URL('https://aimadlab.com/summit-2024'),
