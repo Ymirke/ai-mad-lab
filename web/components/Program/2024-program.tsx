@@ -11,9 +11,9 @@ export function Program2024() {
         <Text>14:30 Doors open and registration</Text>
         <Text>14:45 Grab a drink and network with all the awesome people</Text>
         <Text>
-          15:15 How to become investable and raise venture funding with Unlisted.ai [Room 6]
+          15:15 How to become investable and raise venture funding with Unlisted.ai [Room TBA]
         </Text>
-        <Text>15:15 Unfair Advantage with Amazon Web Services [Room 7]</Text>
+        <Text>15:15 Unfair Advantage with Amazon Web Services [Room TBA]</Text>
         <Text>16:00 Introduction to Al Mad Lab Summit, Team and Partners.</Text>
         <Text mt={10} fw={700}>
           Builder Stories - 1
