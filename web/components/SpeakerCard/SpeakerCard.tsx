@@ -9,7 +9,7 @@ export type Speaker = {
 
 export function SpeakerCard({ speaker }: { speaker: Speaker }) {
   return (
-    <Card style={{ backgroundColor: 'black', color: 'white' }} withBorder>
+    <Card style={{ backgroundColor: 'black', color: 'white', borderColor: '#464646' }} withBorder>
       <Flex justify={'space-between'}>
         <Stack gap={0}>
           <Text>{speaker.name}</Text>

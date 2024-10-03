@@ -1,6 +1,6 @@
 'use client';
 import localFont from 'next/font/local';
-import { Box, Container, Title, Text, Center, Flex, SimpleGrid } from '@mantine/core';
+import { Box, Container, Title, Text, Center, SimpleGrid } from '@mantine/core';
 import { Speaker, SpeakerCard } from '@/components/SpeakerCard/SpeakerCard';
 import { Program2024 } from '@/components/Program/2024-program';
 import { Partners2024 } from '@/components/Partners/partners-2024';
@@ -87,15 +87,15 @@ export default function Ticket() {
         <Title mt={60} ta="center" order={2} style={{ color: 'white', ...gothamBold.style }}>
           Speakers
         </Title>
-        <SimpleGrid mt={15} cols={2}>
+        <SimpleGrid mt={15} cols={{ base: 1, sm: 2 }}>
           {speakers.map((speaker) => (
             <SpeakerCard key={speaker.name} speaker={speaker} />
           ))}
         </SimpleGrid>
         <Title mt={60} ta="center" order={2} style={{ color: 'white', ...gothamBold.style }}>
-          Fireside Chat
+          Developer Fireside
         </Title>
-        <SimpleGrid mt={15} cols={2}>
+        <SimpleGrid mt={15} cols={{ base: 1, sm: 2 }}>
           {firesideChat.map((speaker) => (
             <SpeakerCard key={speaker.name} speaker={speaker} />
           ))}

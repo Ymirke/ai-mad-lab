@@ -16,7 +16,7 @@ export function Program2024() {
         <Text>15:15 Unfair Advantage with Amazon Web Services [Room 7]</Text>
         <Text>16:00 Introduction to Al Mad Lab Summit, Team and Partners.</Text>
         <Text mt={10} fw={700}>
-          Builder Stories - Series A
+          Builder Stories - 1
         </Text>
         <Text>16:15 What you can build with nine years of R&D with Anita, CEO @ Iris.Al</Text>
         <Text>16:30 How to build apps with chain-of-thought with Martin, CTO @ Databutton</Text>
@@ -25,7 +25,7 @@ export function Program2024() {
         </Text>
         <Text>17:00 Half Hour Break</Text>
         <Text mt={10} fw={700}>
-          Builder Stories - Seed Stage
+          Builder Stories - 2
         </Text>
         <Text>17:30 How to make the internet safe with Al with Hege Tokerud, CEO @ Aiba</Text>
         <Text>17:45 Inspiring curiosity with Frikk Fossan, CTO @ Curipod</Text>
