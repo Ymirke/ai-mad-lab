@@ -72,12 +72,6 @@ const gothamBold = localFont({ src: '../../fonts/Gotham-Bold.otf' });
 export default function Ticket() {
   return (
     <>
-      <Head>
-        <meta property="og:image" content="/2024/opengraph-image.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="512" />
-        <meta property="og:image:height" content="512" />
-      </Head>
       <Container pt={50}>
         <Title ta="center" order={1} style={{ color: 'white', ...gothamBold.style }}>
           AI MAD LAB Summit 2024
