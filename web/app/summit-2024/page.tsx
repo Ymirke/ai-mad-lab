@@ -5,6 +5,29 @@ import { Speaker, SpeakerCard } from '@/components/SpeakerCard/SpeakerCard';
 import { Program2024 } from '@/components/Program/2024-program';
 import { Partners2024 } from '@/components/Partners/partners-2024';
 import Head from 'next/head';
+import ogImage from './opengraph-image.png';
+
+export const metadata = {
+  metadataBase: new URL('https://aimadlab.com/summit-2024'),
+  openGraph: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: ogImage.src,
+        width: ogImage.width,
+        height: ogImage.height,
+      },
+    ],
+  },
+};
 
 const speakers: Speaker[] = [
   {
