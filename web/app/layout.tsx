@@ -5,7 +5,7 @@ import { theme } from '../theme';
 import '@/styles/.global.css';
 
 export const metadata = {
-  title: 'AI MAD LAB',
+  title: 'AI Mad Lab',
   description:
     'AI founders, engineers and researchers. Join our community and attend our monthly meetups at StartupLab in Oslo, Norway.',
 };
@@ -15,7 +15,12 @@ export default function RootLayout({ children }: { children: any }) {
     <html lang="en">
       <head>
         <ColorSchemeScript defaultColorScheme="dark" forceColorScheme="dark" />
-        <link rel="shortcut icon" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon-48x48.png" sizes="48x48" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="AI Mad Lab" />
+        <link rel="manifest" href="/site.webmanifest" />
         <link rel="icon" href="Fav_64.gif" type="image/gif" />
         <meta
           name="viewport"

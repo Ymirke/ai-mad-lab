@@ -6,6 +6,7 @@ import {
   IconBrandMeetup,
   IconBrandWhatsapp,
   IconMoodSmile,
+  IconBrandX,
 } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
 import { useMediaQuery } from '@mantine/hooks';
@@ -13,6 +14,11 @@ import { NextFont } from 'next/dist/compiled/@next/font';
 import classes from './Links.module.css';
 
 const links = [
+  {
+    label: 'Follow us',
+    icon: <IconBrandX />,
+    href: 'https://www.x.com/aimadlab/',
+  },
   {
     label: 'Next event',
     icon: <IconBrandMeetup />,

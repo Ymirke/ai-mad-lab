@@ -74,7 +74,7 @@ export default function Ticket() {
     <>
       <Container pt={50}>
         <Title ta="center" order={1} style={{ color: 'white', ...gothamBold.style }}>
-          AI MAD LAB Summit 2024
+          AI Mad Lab Summit 2024
         </Title>
         <Text ta="center" style={{ color: 'white', ...gothamBold.style }}>
           24th of October, Oslo, StartupLab
